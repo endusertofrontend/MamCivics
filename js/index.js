@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // apply functionality to options
-    setupOptionAudio(".optionOne", "../assets/audio/Track03.mp3", ".buttonOne");
-    setupOptionAudio(".optionTwo", "../assets/audio/Track04.mp3", ".buttonTwo");
-    setupOptionAudio(".optionThree", "../assets/audio/Track05.mp3", ".buttonThree");
+    setupOptionAudio(".optionOne", "assets/audio/Track03.mp3", ".buttonOne");
+    setupOptionAudio(".optionTwo", "assets/audio/Track04.mp3", ".buttonTwo");
+    setupOptionAudio(".optionThree", "assets/audio/Track05.mp3", ".buttonThree");
 
 
 

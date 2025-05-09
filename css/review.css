@@ -5,8 +5,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-    
- 
 }
 
 
@@ -205,6 +203,11 @@ p:hover {
     /* ============ Mobile ============= */
     @media (max-width: 767px) {
 
+    .container {
+    padding: 2.5px;
+}
+
+
         .imageContainer img {
             width: 100%;
             height: 100%;
@@ -213,9 +216,45 @@ p:hover {
             display: block;
         }
 
-        .questions {
-            padding: 0px 0px 0px 0px;
-        }
+    /* ========== button resizing for mobile ========= */
+
+    select {
+   background-color: #1e3a8a;     
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+
+  .attention-button {
+    background-color: #ff914d;      
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+    .questionSelection {
+    gap: 1rem;
+  }
+
+  .questions {
+    padding: 0px 0px 0px 0px;
+  }
+
+    .questionChosen {
+    flex: 1 1 auto; 
+    display: flex; 
+    flex-direction: column; 
+    height: 75vh;
+    border-radius: 20px;
+
+
+    }
+
 
         
         }

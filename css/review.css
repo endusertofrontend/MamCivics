@@ -1,0 +1,223 @@
+.container {
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    
+ 
+}
+
+
+/* ============ QUESTION NUMBER ============== */
+.questionSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  select {
+   background-color: #1e3a8a;     
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    animation: pulse 1.5s infinite;
+    /* width: 60%; */
+  }
+  
+  select:hover,
+  select:focus {
+    border-color: #0077cc;
+    outline: none;
+  background-color: #b22222c8;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.4);
+  }
+
+
+  .questionSelection {
+    display: flex;
+    gap: 2rem;
+  }
+
+.attention-button {
+    background-color: #ff914d;      
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    animation: pulse 1.5s infinite;
+    /* width: 60%; */
+  }
+  
+  .attention-button:hover {
+    background-color: #ff7a26;
+    transform: scale(1.05);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(255, 145, 77, 0.7);
+    }
+    50% {
+      transform: scale(1.04);
+      box-shadow: 0 0 15px rgba(255, 145, 77, 0.7);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(255, 145, 77, 0.7);
+    }
+  }
+
+
+
+.questionChosen {
+    flex: 1 1 auto; 
+    display: flex; 
+    flex-direction: column; 
+    height: 85vh;
+    border-radius: 20px;
+  
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* padding: 10px; */
+}
+
+.imageContainer {
+    flex: 2;
+    background-color: #e4ecf2;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.questions {
+    flex: 3;
+    padding: 0px 5rem 0px 5rem;
+    /* background-color: #cc00aa22; */
+    border-radius: 0px 0px 20px 20px;
+    overflow-y: auto; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+
+.imageContainer img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.questionLayout {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 10px;
+   
+}
+
+.asked {
+    /* background-color: aqua; */
+    border-radius: 10px;
+}
+
+.answer {
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+
+.answerOne {
+    display: none;
+}
+
+.answerTwo {
+    display: none;
+}
+
+.audio-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.toggle {
+    display: flex; 
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+}
+.audio-icon svg {
+    height: 50px;
+    width: 50px;
+     cursor: pointer; /* if it's clickable */
+}
+
+.arrow-icon svg {
+    height: 75px;
+    width: 75px;
+     cursor: pointer; /* if it's clickable */
+}
+
+
+@media (min-width: 768px) {
+ 
+p {
+font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 200;
+  color: #1f2937; /* Dark neutral gray (easier on the eyes than pure black) */
+  margin: 1rem 0;
+  line-height: 1.6;
+  cursor: pointer; /* if it's clickable */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+p:hover {
+    font-weight: 900;
+    border-radius: 6px;
+}
+
+.asked p:after {
+    content: "❓";
+    margin-right: 0.5rem;
+}
+
+}
+
+
+    /* ============ Mobile ============= */
+    @media (max-width: 767px) {
+
+        .imageContainer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;           /* crop to fill container */
+            object-position: top center; /* align top, crop bottom */
+            display: block;
+        }
+
+        .questions {
+            padding: 0px 0px 0px 0px;
+        }
+
+        
+        }
+        
+        

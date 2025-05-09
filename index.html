@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civics Tuj qyol:</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="26px" fill="#e71010c5"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="pages/review.html">Review</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Practice</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">TujQyol</a></li>
+            <li class="hideOnMobile"><a href="pages/review.html">Review</a></li>
+            <li class="hideOnMobile"><a href="#">Quiz</a></li>
+            <li class="hideOnMobile"><a href="#">Practice</a></li>
+            <li onclick="showSidebar()" class="menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="26px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+
+    <header id="banner">
+      <h1><i>Tzalu nxi tzyet tb'eiy te<br><span class="tagline">tciudadaniy</span></i></h1>
+      <a href="#wrapper" class="cta-button">QOTZA XNAQ'TZ'AL</a>
+    </header>
+
+    <main id="wrapper">
+        <section class="wrapper" >
+            <div class="directions">
+              <div class="audio-player">
+                <h2>Peq'atz Tzalu</h2>
+                <audio controls>
+                    <source src="assets/audio/Track02.mp3" type="audio/ogg">
+                </audio>
+              </div>
+              <div>
+                <p>Qeiy qtanma te Todos Santos, cheiy taj tzyet b’e te ciudadanía, b’an chi chxnaq’tz’aniy tuyatza tnel t-xaq uj tuj internet jlu, jatza ncheiyaniy tij.</p>
+                <p>Tja yolb’il jlu b’an tjlet oxat t-xaq uj. Tnel jun techal te jun txuyb’aj, te tkab’ jun techal te jun mamb’aj, te toxa jun techal te jun kwal.  Nim choktlenal tuntza t-xnaq’tz’aniy tij examen te ciudadanía te Stado.</p>
+                <p>Ok tok tpeq’iy tij qa techal tuya tej ni ich’ te computadora, kjowil yol chij. Kjawil mas yol tij t-xaq uj tkux chuj.</p>
+              </div>
+                
+            </div>
+            <div class="container">
+                <div class="option optionOne">
+                    <p>Please click the button in front of the grandmother. This will take you to a new page where you can review each U.S. civics question one at a time.</p>
+                    <button class="attention-button buttonOne" id="goToReview">Please Click</button>
+                    
+                </div>
+                <div class="option optionTwo">
+                    <p>please touch here to take a quiz on the questions</p>
+                    <button class="attention-button buttonTwo" id="goToQuiz">Please Click</button>
+                </div>
+                <div class="option optionThree">
+                    <p>Please touch here to review the questions in sets of 10.</p>
+                    <button class="attention-button buttonThree" id="goToPractice">Please Click</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerBrand">
+          <h2>TujQyol</h2>
+        </div>
+       <div class="footerMain">
+        <div class="footerInfo">
+          <h3>Contact</h3>
+          <p class="iconText">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="28px" fill="#1d2d50"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+            <a href="mailto:anibalpablo443@gmail.com">anibalpablo443@gmail.com</a>
+          </p>
+        </div>
+      
+        <div class="footerInfo">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="#">Review</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Practice</a></li>
+          </ul>
+        </div>
+      
+        <div class="footerInfo">
+          <h3>About</h3>
+          <p class="iconText">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="28px" fill="#1d2d50"><path d="M563-491q73-54 114-118.5T718-738q0-32-10.5-47T679-800q-47 0-83 79.5T560-541q0 14 .5 26.5T563-491ZM120-120v-80h80v80h-80Zm160 0v-80h80v80h-80Zm160 0v-80h80v80h-80Zm160 0v-80h80v80h-80Zm160 0v-80h80v80h-80ZM136-280l-56-56 64-64-64-64 56-56 64 64 64-64 56 56-64 64 64 64-56 56-64-64-64 64Zm482-40q-30 0-55-11.5T520-369q-25 14-51.5 25T414-322l-28-75q28-10 53.5-21.5T489-443q-5-22-7.5-48t-2.5-56q0-144 57-238.5T679-880q52 0 85 38.5T797-734q0 86-54.5 170T591-413q7 7 14.5 10.5T621-399q26 0 60.5-33t62.5-87l73 34q-7 17-11 41t1 42q10-5 23.5-17t27.5-30l63 49q-26 36-60 58t-63 22q-21 0-37.5-12.5T733-371q-28 25-57 38t-58 13Z"/></svg>
+            Made by Anibal P.
+          </p>
+        </div>
+        </div>
+      </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>

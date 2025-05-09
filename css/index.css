@@ -1,0 +1,284 @@
+ /*============================
+    Banner
+  =============================*/
+  #banner {
+    position: relative; /* Ensure content and overlay stack correctly */
+    height: 100vh;
+    background-image: url('../assets/images/background4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    z-index: 0; /* Let overlay (z-index: 1) and content (z-index: 2) layer properly */
+    overflow: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  
+  #banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* dark overlay */
+    z-index: 1;
+  }
+  
+  /* Optional: ensure text inside banner sits above overlay */
+  #banner > * {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  #banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(2rem, 5vw, 4rem); /* scales from 2rem up to 4rem based on viewport */
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+.tagline {
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 2.5px;
+  margin-top: 0.5rem;
+}
+
+
+  
+  #banner .cta-button {
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.15rem;
+    font-weight: 900;
+    background-color:  #21a1e604; /* Flag blue */
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1.25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #banner .cta-button:hover {
+    background-color: #f14c2be6;
+    transform: scale(1.05);
+  }
+
+
+
+
+
+
+  /*============================
+    AUDIO SECTION
+  =============================*/
+  
+  .directions {
+    /* margin-bottom: 1.5rem; */
+    text-align: left;
+  }
+
+  
+  .audio-player {
+    background: #1d2d50b6;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  
+  .audio-player {
+    text-align: center;
+    color: white;
+  }
+  
+  
+  /*============================
+    OPTION CONTAINER
+  =============================*/
+  
+  .wrapper {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  
+  .option {
+    flex: 1;
+    min-width: 280px;
+    padding: 1rem;
+    color: white;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .option:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  
+  .optionOne {
+    background-image: url('../assets/images/TSWomanC.jpg');
+  }
+  
+  .optionTwo {
+    background-image: url('../assets/images/TSManC.jpg');
+  }
+  
+  .optionThree {
+    background-image: url('../assets/images/TSBoyC.jpg');
+  }
+  
+  
+/* =====================
+  Option Buttons
+  ====================== */
+  .attention-button {
+    display: none;
+    background-color: #ff914d;        /* Warm, inviting color */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    animation: pulse 1.5s infinite;
+    width: 60%;
+  }
+  
+  .attention-button:hover {
+    background-color: #ff7a26;
+    transform: scale(1.05);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(255, 145, 77, 0.7);
+    }
+    50% {
+      transform: scale(1.04);
+      box-shadow: 0 0 15px rgba(255, 145, 77, 0.7);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(255, 145, 77, 0.7);
+    }
+  }
+  
+  
+  /*============================
+    RESPONSIVE STYLES
+  =============================*/
+  
+  /* Tablet and Up */
+  @media (min-width: 768px) {
+
+    
+    
+    .directions {
+      background-color: antiquewhite;
+      display: flex;
+      gap: 6rem;
+      text-align: left;
+      min-height: 20vh;
+      align-items: center;
+      justify-content: center;
+      /* padding: 15px; */
+    }
+
+    
+    
+    .container {
+      background-image: url('../assets/images/usFlag.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 50vh;
+      padding: 15px;
+    }
+  
+    .option {
+      min-height: 525px;
+    }
+  
+  }
+  
+  /* ============ Mobile ============= */
+  @media (max-width: 767px) {
+    
+    /* ================
+      Main Container
+      ================ */
+
+    main {
+      padding: 0 1rem;
+    }
+
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .option {
+      width: 100%;
+      padding: 2rem;
+      min-height: 300px;
+      background-position: top;
+    }
+
+    .optionThree {
+      margin-bottom: 5px;
+    }
+    .optionOne {
+      margin-top: 5px;
+    }
+  
+    .audio-player {
+      background: #1d2d50;
+    }
+  
+
+    /* ===================
+      Banner
+      ================== */
+      #banner {
+        height: 40vh;
+        font-size: 0.95rem;
+        padding: 0.5rem;
+      }
+  }
+
+
